@@ -10,9 +10,9 @@ object prueba extends App {
   val s = OrderedList("Hello, world!".toList)
   println(s)
 
-  val array = Source.fromFile("IntegerArray.txt").getLines.toList map (_.toInt)
+  val array = Source.fromFile("IntegerArray.txt").getLines map (_.toInt)
 
-  val res = OrderedList(array)
+  val res = OrderedList(array.toList)
 
   println(res.numInv) //--> 2407905288
 
